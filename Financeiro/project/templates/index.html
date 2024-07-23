@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Dashboard</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Finance Dashboard</h1>
+        <div>
+            <label for="ativos">Select Stock:</label>
+            <select id="ativos" onchange="updateChart()">
+                <!-- Opções serão preenchidas via JavaScript -->
+            </select>
+        </div>
+        <div id="chart"></div>
+        <h2>Dollar Price</h2>
+        <p id="dollar-price"></p>
+        <h2>Analyze Data</h2>
+        <textarea id="prompt" placeholder="Enter your prompt..."></textarea>
+        <button onclick="analyzeData()">Analyze</button>
+        <p id="analysis-result"></p>
+        <h2>Data Table</h2>
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Open</th>
+                    <th>High</th>
+                    <th>Low</th>
+                    <th>Close</th>
+                    <th>Ativo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Dados da tabela serão inseridos aqui via JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <script src="/static/scripts.js"></script>
+</body>
+</html>
