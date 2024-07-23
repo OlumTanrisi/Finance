@@ -13,7 +13,7 @@ import time
 app = Flask(__name__)
 
 # Configurar a API da OpenAI
-openai.api_key = 'sk-proj-AwGA0yLR2jYSdKmUfnmaT3BlbkFJZ2EALrsLjRvSPVP9CTln'
+openai.api_key = 'KEY_OPENAI'
 
 # Lista de símbolos de ações
 carteira_yf = ['ABEV3.SA', 'B3SA3.SA', 'ELET3.SA', 'GGBR4.SA', 'ITSA4.SA',
@@ -108,7 +108,7 @@ class analisededados:
                 host='localhost',
                 user='root',
                 password='admin',
-                database='analisededados',
+                database='name_database',
                 auth_plugin='mysql_native_password'  
             )
             if self.conn.is_connected():
